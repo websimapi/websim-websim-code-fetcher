@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Websim Code Fetcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Websim Code Fetcher</h1>
+        <p>Enter a Websim project revision URL to fetch its HTML, CSS, and JavaScript code.</p>
+        <div class="input-group">
+            <input type="text" id="urlInput" placeholder="e.g., https://websim.com/@user/slug/version">
+            <button id="fetchBtn">Fetch Code</button>
+        </div>
+        <div id="loader" class="loader" style="display: none;"></div>
+        <div id="results" class="results-container">
+            <div id="error" class="error-message" style="display: none;"></div>
+            <div id="code-output" style="display: none;">
+                <h2>HTML</h2>
+                <pre><code class="language-html" id="htmlCode"></code></pre>
+                
+                <h2>CSS</h2>
+                <pre><code class="language-css" id="cssCode"></code></pre>
+                
+                <h2>JavaScript</h2>
+                <pre><code class="language-javascript" id="jsCode"></code></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "std:kv-storage": "https://cdn.jsdelivr.net/npm/@bason/kv-storage@1.0.0/kv-storage.mjs"
+      }
+    }
+    </script>
+    <script type="module" src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
